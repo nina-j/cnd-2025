@@ -1,4 +1,5 @@
 from pathlib import Path
+
 import polars as pl
 
 
@@ -12,7 +13,7 @@ def main() -> None:
     csv_data = pl.read_csv(csv_path, ignore_errors=True)
 
     us_data = csv_data.filter(pl.col("country") == "us").rename(str.strip)
-    us_data = us_data.drop_nulls().head(1000)
+    us_data = us_data.drop_nulls()
     us_data = us_data.with_columns(pl.col("city").str.replace_all(r"\(.*\)", ""))
     us_data = us_data.with_columns(pl.col("city").str.strip_chars())
     us_data = us_data.with_columns(pl.col("comments").str.replace_all(r"(&#44)", ""))
@@ -20,13 +21,12 @@ def main() -> None:
     us_data = us_data.rename(
         {
             "duration (seconds)": "duration_seconds",
-            "duration (hours/min)": "duration_text",
-            "date posted": "date_posted",
         }
     )
+    us_data = us_data.sample(100, seed=42)
 
     locations = (
-        us_data.select(["city", "state", "country", "latitude", "longitude"])
+        us_data.select(["city", "state", "latitude", "longitude"])
         .unique()
         .with_row_index("location_id", offset=1)
         .sort("location_id")
@@ -34,7 +34,6 @@ def main() -> None:
 
     shapes = (
         us_data.select("shape")
-        .filter(pl.col("shape").is_not_null())
         .unique()
         .with_row_index("shape_id", offset=1)
         .sort("shape_id")
@@ -43,7 +42,7 @@ def main() -> None:
     sightings = (
         us_data.join(
             locations,
-            on=["city", "state", "country"],
+            on=["city", "state"],
             how="left",
         )
         .join(shapes, on="shape", how="left")
@@ -53,9 +52,7 @@ def main() -> None:
                 "location_id",
                 "shape_id",
                 "duration_seconds",
-                "duration_text",
                 "comments",
-                "date_posted",
             ]
         )
         .with_row_index("sighting_id", offset=1)

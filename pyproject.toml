@@ -9,12 +9,10 @@ dependencies = [
     "pydantic>=2.11.9",
     "pydantic-ai>=1.0.8",
     "structlog>=25.4.0",
+    "polars>=1.33.1",
 ]
 
 [dependency-groups]
-data = [
-    "polars>=1.33.1",
-]
 lint = ["mypy>=1.18.1", "ruff>=0.13.0"]
 test = ["pytest>=8.4.2", "pytest-cov>=7.0.0"]
 
@@ -22,3 +20,7 @@ test = ["pytest>=8.4.2", "pytest-cov>=7.0.0"]
 exclude_gitignore = true
 disallow_untyped_defs = true
 warn_return_any = true
+ignore_missing_imports = true
+
+[tool.ruff.lint]
+extend-select = ["I"]
