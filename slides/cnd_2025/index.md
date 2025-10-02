@@ -121,13 +121,20 @@ Why are we inventing new engineering disciplines when we already have a perfectl
 ![bg](./assets/data_engineering.jpg)
 
 ---
+## Data engineering
 
-## Relational databases
+<div data-marpit-fragment>
+
+### Relational databases
+
+</div>
 
 * Info on a single entity usually requires multiple JOINs
+* We denormalize data to make it easier to query analytically
 * Ask your local data analyst how easy it is to find the data you need
 
 <!--
+Traditionally in data engineering, we work with relational databases, denormalize data and move it into datalakes
 The point here:
 There's an entire career field dedicated to analysing data and finding correct context
 It's not easy!
@@ -223,7 +230,7 @@ Relationships are first-class entities
 <br><br>
 <br><br>
 
-![bg](./assets/graph.png)
+![bg 85%](./assets/graph_2.png)
 
 <!--
 Example of how UFO data could be stored in a graph database
@@ -248,6 +255,16 @@ For legal reasons, the NASA part is of course a joke. Not trying to cause an int
 
 ---
 
-Thanks :)
+## Scully, you're not gonna believe this...
+
+* LLMs are not magic
+* Proper data engineering is still important
+* Graph data modelling can help provide concise context
+
+![bg](https://tenor.com/view/yeah-the-x-files-agent-scully-dana-scully-scully-gif-27518038.gif)
+
+---
+
+Thanks :alien:
 
 ![bg](./assets/truth.jpg)

@@ -252,10 +252,13 @@ name = "cnd-2025"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "logfire" },
     { name = "neo4j-rust-ext" },
     { name = "polars" },
     { name = "pydantic" },
     { name = "pydantic-ai" },
+    { name = "pydantic-settings" },
+    { name = "rich" },
     { name = "structlog" },
 ]
 
@@ -271,10 +274,13 @@ test = [
 
 [package.metadata]
 requires-dist = [
+    { name = "logfire", specifier = ">=4.10.0" },
     { name = "neo4j-rust-ext", specifier = ">=5.28.2.1" },
     { name = "polars", specifier = ">=1.33.1" },
     { name = "pydantic", specifier = ">=2.11.9" },
     { name = "pydantic-ai", specifier = ">=1.0.8" },
+    { name = "pydantic-settings", specifier = ">=2.11.0" },
+    { name = "rich", specifier = ">=14.1.0" },
     { name = "structlog", specifier = ">=25.4.0" },
 ]
 

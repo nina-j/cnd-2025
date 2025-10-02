@@ -14,10 +14,15 @@ def parse_datetime(v: Any) -> Any:
     return v
 
 
+def parse_unknown(v: Any) -> Any:
+    if isinstance(v, str) and v.lower() == "unknown":
+        return None
+    return float(v)
+
+
 class Base(BaseModel):
     model_config = ConfigDict(
         extra="forbid",
-        str_min_length=1,
         str_strip_whitespace=True,
         validate_assignment=True,
     )
@@ -58,10 +63,29 @@ class NasaSightingCsv(Base):
     assigned_agent: str
     radiation_detected: bool
     electromagnetic_anomaly: bool
-    altitude_est_meters: int
-    speed_est_kmh: int
+    altitude_est_meters: Annotated[int | None, BeforeValidator(parse_unknown)]
+    speed_est_kmh: Annotated[int | None, BeforeValidator(parse_unknown)]
     witness_count: int
     military_witness: bool
     photos_collected: int
     samples_collected: int
     notes: str
+
+
+class Sighting(Base):
+    sighting_id: int
+    comments: str
+
+
+class NasaSighting(Base):
+    case_id: str
+    credibility_score: float
+    altitude_est_meters: int
+    notes: str
+
+
+class RelatedSightings(Base):
+    private_sighting: Sighting
+    nasa_sighting: NasaSighting
+    datetime: AwareDatetime
+    shape: str

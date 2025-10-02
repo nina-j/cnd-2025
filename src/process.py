@@ -23,7 +23,8 @@ def main() -> None:
             "duration (seconds)": "duration_seconds",
         }
     )
-    us_data = us_data.sample(100, seed=42)
+    us_data = us_data.sort("city")
+    us_data = us_data.head(1000)
 
     locations = (
         us_data.select(["city", "state", "latitude", "longitude"])
