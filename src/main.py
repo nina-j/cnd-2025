@@ -13,6 +13,12 @@ logger = get_logger()
 
 
 async def run_agent(agent: Agent, prompt: str) -> None:
+    """Run an agent with the given prompt
+
+    Args:
+        agent: The agent to run
+        prompt: The prompt to run the agent with
+    """
     await logger.ainfo("Agent starting", prompt=prompt)
     result = await agent.run(prompt)
     await logger.ainfo("Agent done")

@@ -240,18 +240,344 @@ For example, observation dates can be shared between multiple sightings
 which allows us to do effective queries like "give me all sightings in the last month"
 --->
 
+---
+
+## Relational data
+<style scoped>
+table {
+    font-size: 20px;
+}
+</style>
+<div data-marpit-fragment>
+
+| sighting_id | datetime        | location_id | shape_id | duration_seconds | comments |
+| ----------: | :-------------- | ----------: | -------: | ---------------: | :------- |
+|          59 | 11/1/2004 19:00 |         161 |       17 |              420 | ...      |
+|         185 | 11/1/2004 19:00 |         143 |        9 |               60 | ...      |
+
+</div>
+
+<div data-marpit-fragment>
+
+| location_id | city         | state |   latitude |    longitude |
+| ----------: | :----------- | :---- | ---------: | -----------: |
+|         143 | agoura hills | ca    | 34.1363889 | -118.7736111 |
+|         161 | abingdon     | va    | 36.7097222 |  -81.9775000 |
+
+</div>
+
+<div data-marpit-fragment>
+
+
+| shape_id | shape   |
+| -------: | :------ |
+|        9 | light   |
+|       17 | unknown |
+
+</div>
+
+
+---
+
+
+## Graph data
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+![bg 85%](./assets/graph_2.png)
+
+<!--
+Example of how UFO data could be stored in a graph database
+Note that we have split data into more entities than the three tables shown earlier
+This is because we can get deduplication for free!
+For example, observation dates can be shared between multiple sightings
+which allows us to do effective queries like "give me all sightings in the last month"
+--->
+
+---
+## Demo time!
+
+* We'll be using [this dataset from Kaggle](https://www.kaggle.com/datasets/NUFORC/ufo-sightings)
+
+<br>
+<div data-marpit-fragment>
+
+![w:700](./assets/kaggle.png)
+
+</div>
 
 ---
 
 ## Demo time!
 
-* We'll be using [this dataset from Kaggle](https://www.kaggle.com/datasets/NUFORC/ufo-sightings)
-* We've also hacked NASA's database...
-* All code can be found [here](https://github.com/nina-j/cnd-2025)
+* We have also hacked NASA's database...
 
-<!--
-For legal reasons, the NASA part is of course a joke. Not trying to cause an international incident. :D
---->
+<br>
+<div data-marpit-fragment>
+
+![w:1150](./assets/nasa.png)
+
+</div>
+
+---
+
+## BASED & RUST PILLED
+
+![bg](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGthdnZ2bGVsMnlocGRxb2Rqd2s1dDVhODB6aXZoZGRzbWh2MmZ6cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ehwuBgKNA2NACoFa7w/giphy.gif)
+
+---
+
+## Python packages
+
+* [pydantic-ai](https://ai.pydantic.dev/) - AI Agent framework
+* [pydantic](https://docs.pydantic.dev/) - Data validation
+* [logfire](https://logfire.pydantic.dev/docs/) - Logging
+* [polars](https://www.polars.org/https://pola.rs/) - Data processing
+* [neo4j-rust-ext](https://github.com/neo4j/neo4j-python-driver-rust-ext) - Neo4j Python driver
+
+---
+<!--  _footer: "" -->
+## Compose file
+
+```yml
+
+services:
+  neo4j:
+    container_name: cnd-neo4j
+    hostname: neo4j
+    image: neo4j:latest
+    environment:
+      - NEO4J_AUTH=neo4j/cloudnative4j
+      - NEO4J_PLUGINS=["apoc"]
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+
+  neo4j-mcp:
+    container_name: cnd-neo4j-mcp
+    hostname: neo4j-mcp
+    image: mcp/neo4j-cypher:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USERNAME=neo4j
+      - NEO4J_PASSWORD=cloudnative4j
+      - NEO4J_READ_ONLY=true # don't want the agents to write to the database
+      - NEO4J_TRANSPORT=http
+      - NEO4J_MCP_SERVER_PORT=8000
+      - NEO4J_MCP_SERVER_PATH=/api/mcp/
+    depends_on:
+      - neo4j
+
+volumes:
+  neo4j_data:
+
+```
+---
+<!--  _footer: "" -->
+## Loading data
+
+```python
+def load_locations(tx: ManagedTransaction) -> None:
+    locations = TypeAdapter(list[LocationCsv]).validate_python(
+        read_files("locations").to_dicts()
+    )
+    tx.run(
+        """//cypher
+        UNWIND $locations AS location
+        MERGE (l:Location {location_id: location.location_id})
+        SET l += location
+        """,
+        locations=[location.model_dump() for location in locations],
+    )
+
+
+def load_shapes(tx: ManagedTransaction) -> None:
+    shapes = TypeAdapter(list[ShapeCsv]).validate_python(
+        read_files("shapes").to_dicts()
+    )
+    tx.run(
+        """//cypher
+        UNWIND $shapes AS shape
+        MERGE (s:Shape {shape_id: shape.shape_id})
+        SET s += shape
+        """,
+        shapes=[shape.model_dump() for shape in shapes],
+    )
+
+```
+
+---
+<!--  _footer: "" -->
+
+## Loading data
+
+```python
+def load_sightings(tx: ManagedTransaction) -> None:
+    sightings = TypeAdapter(list[SightingCsv]).validate_python(
+        read_files("sightings").to_dicts()
+    )
+    tx.run(
+        """//cypher
+        UNWIND $sightings AS sighting
+        MERGE (s:Sighting {sighting_id: sighting.sighting_id})
+        SET s.comments = sighting.comments
+
+        MERGE (dt: ObservationTime {value: sighting.datetime})
+        MERGE (dur: Duration {value: sighting.duration_seconds})
+
+        WITH *
+
+        MATCH (l:Location {location_id: sighting.location_id})
+        MATCH (sh:Shape {shape_id: sighting.shape_id})
+        MERGE (s)-[:ON_LOCATION]->(l)
+        MERGE (s)-[:FOR_DURATION]->(dur)
+        MERGE (s)-[:OBSERVED_AT]->(dt)
+        MERGE (s)-[:HAS_SHAPE]->(sh)
+        """,
+        sightings=[sighting.model_dump() for sighting in sightings],
+    )
+```
+---
+<!--  _footer: "" -->
+
+## Loading data
+
+```python
+def load_nasa_sightings(tx: ManagedTransaction) -> None:
+    nasa_sightings = TypeAdapter(list[NasaSightingCsv]).validate_python(
+        read_files("nasa_sightings").to_dicts()
+    )
+    tx.run(
+        """//cypher
+        UNWIND $nasa_sightings AS nasa_sighting
+        MERGE (ns:NasaSighting {case_id: nasa_sighting.case_id})
+        SET ns.credibility_score = nasa_sighting.credibility_score
+        SET ns.altitude_est_meters = nasa_sighting.altitude_est_meters
+        SET ns.notes = nasa_sighting.notes
+
+        MERGE (dt: ObservationTime {value: nasa_sighting.datetime})
+        MERGE (cl: Classification {value: nasa_sighting.classification})
+        MERGE (tl: ThreatLevel {value: nasa_sighting.threat_level})
+        MERGE (invs: InvestigationStatus {value: nasa_sighting.investigation_status})
+
+        WITH *
+
+        MATCH (l:Location {location_id: nasa_sighting.location_id})
+        MATCH (s:Shape {shape_id: nasa_sighting.shape_id})
+        MERGE (ns)-[:ON_LOCATION]->(l)
+        MERGE (ns)-[:OBSERVED_AT]->(dt)
+        MERGE (ns)-[:HAS_SHAPE]->(s)
+        MERGE (ns)-[:HAS_CLASSIFICATION]->(cl)
+        MERGE (ns)-[:HAS_THREAT_LEVEL]->(tl)
+        MERGE (ns)-[:HAS_INVESTIGATION_STATUS]->(invs)
+        """,
+        nasa_sightings=[nasa_sighting.model_dump() for nasa_sighting in nasa_sightings],
+    )
+
+```
+
+---
+<!--  _footer: "" -->
+## <!-- fit---> Results in graph database
+![bg left:70%](./assets/full_graph.png)
+
+---
+<!--  _footer: "" -->
+## Defining agents
+
+```python
+class Sighting(Base):
+    sighting_id: int
+    comments: str
+
+
+class NasaSighting(Base):
+    case_id: str
+    credibility_score: float
+    altitude_est_meters: int
+    notes: str
+
+
+class RelatedSightings(Base):
+    private_sighting: Sighting
+    nasa_sighting: NasaSighting
+    datetime: AwareDatetime
+    shape: str
+
+```
+
+---
+<!--  _footer: "" -->
+## Defining agents
+
+```python
+def get_agent(output_type: Any) -> Agent:
+    """Obtain an agent with the given output type
+
+    Args:
+        output_type: The type of the output to be returned by the agent
+
+    Returns:
+        An agent with the given output type
+    """
+    settings = Settings()
+    server = MCPServerStreamableHTTP(settings.mcp_url)
+    return Agent(
+        model=AnthropicModel(
+            model_name="claude-sonnet-4-5",
+            provider=AnthropicProvider(
+                api_key=settings.anthropic_api_key.get_secret_value()
+            ),
+        ),
+        toolsets=[server],
+        output_type=output_type,
+    )
+
+
+sightings_agent = partial(get_agent, output_type=list[RelatedSightings])
+
+```
+
+---
+<!--  _footer: "" -->
+## Running agents
+
+```python
+async def run_agent(agent: Agent, prompt: str) -> None:
+    """Run an agent with the given prompt
+
+    Args:
+        agent: The agent to run
+        prompt: The prompt to run the agent with
+    """
+    await logger.ainfo("Agent starting", prompt=prompt)
+    result = await agent.run(prompt)
+    await logger.ainfo("Agent done")
+    pprint(result.output)
+
+
+async def main() -> None:
+    await run_agent(
+        sightings_agent(),
+        "Find 5 sightings that are related to a NASA sighting",
+    )
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+```
+
+---
+
+## Let's see it in action...
 
 ---
 
@@ -261,10 +587,21 @@ For legal reasons, the NASA part is of course a joke. Not trying to cause an int
 * Proper data engineering is still important
 * Graph data modelling can help provide concise context
 
-![bg](https://tenor.com/view/yeah-the-x-files-agent-scully-dana-scully-scully-gif-27518038.gif)
+![bg contain](https://tenor.com/view/yeah-the-x-files-agent-scully-dana-scully-scully-gif-27518038.gif)
 
 ---
+<div data-marpit-fragment>
 
 Thanks :alien:
 
+</div>
+<br>
+<br>
+
 ![bg](./assets/truth.jpg)
+
+<div data-marpit-fragment>
+
+![h:300](./assets/linkedin.jpg)
+
+</div>

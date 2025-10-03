@@ -21,10 +21,10 @@ def load_locations(tx: ManagedTransaction) -> None:
     )
     tx.run(
         """//cypher
-    UNWIND $locations AS location
-    MERGE (l:Location {location_id: location.location_id})
-    SET l += location
-    """,
+        UNWIND $locations AS location
+        MERGE (l:Location {location_id: location.location_id})
+        SET l += location
+        """,
         locations=[location.model_dump() for location in locations],
     )
 
