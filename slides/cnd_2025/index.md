@@ -73,6 +73,7 @@ Key takeaways from article:
 - LLMs guess when uncertain rather than admitting uncertainty
 - Training & evaluation reward guessing rather than admitting uncertainty
 - "Hallucinations" originate as errors in binary classification
+- If I wanted unreliable things in prod I'd use Javascript :)
 
 -->
 
@@ -379,6 +380,14 @@ volumes:
   neo4j_data:
 
 ```
+
+---
+<!-- _footer: ""-->
+
+![bg left](./assets/rogue_ai.webp)
+
+## Write access in prod is a great idea!!11!!1
+
 ---
 <!--  _footer: "" -->
 ## Loading data
