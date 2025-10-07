@@ -3,7 +3,6 @@ marp: true
 theme: uncover
 class: invert
 paginate: true
-footer: Graph data modelling for Agentic AI • Cloud Native Denmark 2025
 style: |
   section {
     font-family: 'Iosevka';
@@ -19,9 +18,13 @@ style: |
 ---
 <!-- _paginate: skip -->
 
-# <!-- fit --> Graph data modelling for Agentic AI
+## Graph data modelling for Agentic AI
 Cloud Native Denmark 2025
-<!-- _footer: Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustrated by Ditte Jensen -->
+
+![bg left](./assets/computer.png)
+
+<!-- _footer: Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustated by Ditte Jensen -->
+
 <!--
 Hello + name & workplace
 Presentation illustrated by Ditte Jensen
@@ -33,6 +36,8 @@ Questions after the presentation please :)
 
 > Agentic AI is a class of artificial intelligence that focuses on **autonomous systems** that can make decisions and perform tasks with or without human intervention.
 [Wikipedia](https://en.wikipedia.org/wiki/Agentic_AI)
+
+![bg left:30%](./assets/ai_agent.png)
 
 <!--
 Determine AI knowledge + define agentic AI by slides
@@ -47,6 +52,7 @@ Describes frameworks rather than a specific technology
 > Agentic AI is an artificial intelligence system that can accomplish a specific goal with **limited supervision**. It consists of AI agents—machine learning models that mimic human decision-making to solve problems in real time.
 [IBM](https://www.ibm.com/think/topics/agentic-ai)
 
+![bg right:30%](./assets/ai_agent.png)
 
 <!--
 Determine AI knowledge + define agentic AI by slides
@@ -66,6 +72,8 @@ Describes frameworks rather than a specific technology
 ##### How can we make them more reliable?
 
 </div>
+
+![bg left:40%](./assets/ufo_empty.png)
 
 <!--
 
@@ -98,8 +106,14 @@ There's another problem too
 * Smaller inputs lead to better results
 
 <br><br>
-###### https://research.trychroma.com/context-rot
 
+<div data-marpit-fragment>
+
+###### <!-- fit --> https://research.trychroma.com/context-rot
+
+</div>
+
+![bg right:40%](./assets/ufo_cow.png)
 <!--
 Key takeaways from article:
 - LLMs should in principle handle the 10,000th token as reliably as the 1st
@@ -108,13 +122,19 @@ Key takeaways from article:
 -->
 
 ---
+
 ## Context engineering
 
-SIKE
 
 <!--
 Why are we inventing new engineering disciplines when we already have a perfectly good one?
 -->
+
+---
+<!-- _paginate: hold -->
+
+## ~~Context engineering~~
+### SIKE
 
 
 ---
@@ -213,6 +233,8 @@ It's somewhat normalized which is nice for several good reasons when working tra
 * Uses nodes and relationships to represent data
 * Flexible schemas & index-free adjacency
 * Implementations include [Neo4j](https://github.com/neo4j/neo4j), [dgraph](https://github.com/hypermodeinc/dgraph), [Apache AGE](https://github.com/apache/age)
+
+![bg right:40%](./assets/ufo_party.png)
 
 <!--
 Index-free adjacency means that each node references its neighbours
@@ -342,6 +364,7 @@ which allows us to do effective queries like "give me all sightings in the last 
 ---
 <!--  _footer: "" -->
 ## Compose file
+
 
 ```yml
 
@@ -587,6 +610,7 @@ if __name__ == "__main__":
 ---
 
 ## Let's see it in action...
+![bg left](./assets/ai_agent.png)
 
 ---
 

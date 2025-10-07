@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-GB"><head><title>&lt;!-- fit --&gt; Graph data modelling for Agentic AI</title><meta property="og:title" content="&lt;!-- fit --&gt; Graph data modelling for Agentic AI"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}/*!
+<!DOCTYPE html><html lang="en-GB"><head><title>Graph data modelling for Agentic AI</title><meta property="og:title" content="Graph data modelling for Agentic AI"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}/*!
  * Marp / Marpit Uncover theme
  *
  * @theme uncover
@@ -7,8 +7,8 @@
  * @auto-scaling true
  * @size 16:9 1280px 720px
  * @size 4:3 960px 720px
- */div#\:\$p > svg > foreignObject > section{--color-background:#fdfcff;--color-background-code:#f2f1f4;--color-background-paginate:rgba(32,34,40,.05);--color-foreground:#202228;--color-highlight:#009dd5;--color-highlight-hover:#087eaa;--color-highlight-heading:#33b1dd;--color-header:rgba(32,34,40,.4);--color-header-shadow:rgba(253,252,255,.8);background:var(--color-background);color:var(--color-foreground);display:block;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-size:40px;height:720px;letter-spacing:3px;line-height:1.4;padding:30px 70px;place-content:safe center center;position:relative;text-align:center;width:1280px;word-wrap:break-word;align-items:stretch;flex-flow:column nowrap;z-index:0}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:40px;}div#\:\$p > svg > foreignObject > section:after{align-items:flex-end;background:linear-gradient(-45deg, var(--color-background-paginate) 50%, transparent 50%);background-size:cover;color:var(--color-foreground);display:flex;font-size:.6em;height:80px;justify-content:flex-end;padding:30px;text-align:right;text-shadow:0 0 5px var(--color-background);width:80px}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:.6em;}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs{background:#fff;color:#000}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-addition,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-meta,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-string,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-symbol,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-template-tag,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-template-variable{color:#756bb1}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-comment,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-quote{color:#636363}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-bullet,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-link,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-literal,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-number,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-regexp{color:#31a354}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-deletion,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-variable{color:#88f}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-built_in,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-doctag,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-keyword,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-name,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-section,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-selector-class,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-selector-id,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-selector-tag,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-strong,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-tag,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-title,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-type{color:#3182bd}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-attribute{color:#e6550d}div#\:\$p > svg > foreignObject > section:where(.invert){--color-background:#202228;--color-background-code:#2b2d33;--color-background-paginate:hsla(0,0%,100%,.05);--color-foreground:#fff;--color-highlight:#60d0f0;--color-highlight-hover:#88dcf4;--color-highlight-heading:#80d9f3;--color-header:hsla(0,0%,100%,.4);--color-header-shadow:rgba(32,34,40,.8);}div#\:\$p > svg > foreignObject > section:where(.invert) :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section:where(.invert) code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs{background:#222;color:#fff}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-comment,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-quote{color:#777}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-built_in,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-bullet,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-deletion,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-link,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-literal,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-meta,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-number,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-params,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-regexp,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-symbol,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-tag,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-template-variable,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-variable{color:#ab875d}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-attribute,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-name,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-section,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-selector-class,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-selector-id,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-title,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-type{color:#9b869b}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-addition,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-keyword,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-selector-tag,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-string{color:#8f9c6c}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section[data-header]>:nth-child(2){margin-top:0}div#\:\$p > svg > foreignObject > section>:last-child,div#\:\$p > svg > foreignObject > section[data-footer]>:nth-last-child(2){margin-bottom:0}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:0 0 15px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:15px 0 30px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight-heading);font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:660px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.7em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.4em;letter-spacing:2px}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.2em;letter-spacing:2px}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em;letter-spacing:1px}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.8em;letter-spacing:1px}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{color:var(--color-header);font-size:.45em;left:70px;letter-spacing:1px;position:absolute;right:70px;text-shadow:0 1px 0 var(--color-header-shadow);z-index:1}div#\:\$p > svg > foreignObject > section header{top:30px}div#\:\$p > svg > foreignObject > section footer{bottom:30px}div#\:\$p > svg > foreignObject > section a{color:var(--color-highlight);text-decoration:none}div#\:\$p > svg > foreignObject > section a:hover{color:var(--color-highlight-hover);text-decoration:underline}div#\:\$p > svg > foreignObject > section ol,div#\:\$p > svg > foreignObject > section ul{margin:0 auto;text-align:left}div#\:\$p > svg > foreignObject > section>ol,div#\:\$p > svg > foreignObject > section>ul{margin-bottom:15px}div#\:\$p > svg > foreignObject > section code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;letter-spacing:0}div#\:\$p > svg > foreignObject > section :not(:is(pre, marp-pre))>code,div#\:\$p > svg > foreignObject > section>code{background:var(--color-background-code);color:var(--color-foreground);margin:-.2em .2em .2em;padding:.2em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){--preserve-aspect-ratio:xMidYMid meet;filter:drop-shadow(0 4px 4px rgba(0, 0, 0, .2));font-size:70%;line-height:1.15;margin:15px 0 30px;text-align:left}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:570px}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:var(--color-background-code);box-sizing:content-box;color:var(--color-foreground);display:block;margin:0 auto;min-width:456px;padding:.4em .6em}div#\:\$p > svg > foreignObject > section[data-size="4:3"] :is(pre, marp-pre)>code{min-width:328px}div#\:\$p > svg > foreignObject > section table{border-collapse:collapse;margin:0 auto 15px}div#\:\$p > svg > foreignObject > section table>tbody>tr>td,div#\:\$p > svg > foreignObject > section table>tbody>tr>th,div#\:\$p > svg > foreignObject > section table>thead>tr>td,div#\:\$p > svg > foreignObject > section table>thead>tr>th{padding:.15em .5em}div#\:\$p > svg > foreignObject > section table>thead>tr>td,div#\:\$p > svg > foreignObject > section table>thead>tr>th{border-bottom:3px solid}div#\:\$p > svg > foreignObject > section table>tbody>tr:not(:last-child)>td,div#\:\$p > svg > foreignObject > section table>tbody>tr:not(:last-child)>th{border-bottom:1px solid}div#\:\$p > svg > foreignObject > section blockquote{font-size:90%;line-height:1.3;padding:0 2em;position:relative;z-index:0}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNDQgMTkuMyAzOC45NCAwQzguMTQgOS41OSAwIDQwLjA1IDAgNTQuODNWMTAwaDQxLjQ3VjU0LjgzaC0yM2MtLjA0LS4yOC4yNS0yNy42NiAyNS41My0zNS41M201NiAwTDk0Ljk0IDBDNjQuMTQgOS41OSA1NiA0MC4wNSA1NiA1NC44M1YxMDBoNDEuNDdWNTQuODNoLTIzYy0uMDQtLjI4LjI1LTI3LjY2IDI1LjUzLTM1LjUzIiBzdHlsZT0iZmlsbDojODg4O29wYWNpdHk6LjMzIi8+PC9zdmc+");height:auto;pointer-events:none;position:absolute;width:1em;z-index:-1}div#\:\$p > svg > foreignObject > section blockquote:before{left:0;top:0}div#\:\$p > svg > foreignObject > section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:last-child{margin-bottom:0}div#\:\$p > svg > foreignObject > section mark{background:transparent;color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section{font-family:'Iosevka'}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#6CC417}div#\:\$p > svg > foreignObject > section .columns{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p > svg > foreignObject > section[data-marpit-scope-a3hmuFbk] table{font-size:20px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-IcZridmS] table{font-size:20px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
-</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="invert" data-paginate="skip" data-footer="Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustrated by Ditte Jensen" data-theme="uncover" data-style="section {
+ */div#\:\$p > svg > foreignObject > section{--color-background:#fdfcff;--color-background-code:#f2f1f4;--color-background-paginate:rgba(32,34,40,.05);--color-foreground:#202228;--color-highlight:#009dd5;--color-highlight-hover:#087eaa;--color-highlight-heading:#33b1dd;--color-header:rgba(32,34,40,.4);--color-header-shadow:rgba(253,252,255,.8);background:var(--color-background);color:var(--color-foreground);display:block;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-size:40px;height:720px;letter-spacing:3px;line-height:1.4;padding:30px 70px;place-content:safe center center;position:relative;text-align:center;width:1280px;word-wrap:break-word;align-items:stretch;flex-flow:column nowrap;z-index:0}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:40px;}div#\:\$p > svg > foreignObject > section:after{align-items:flex-end;background:linear-gradient(-45deg, var(--color-background-paginate) 50%, transparent 50%);background-size:cover;color:var(--color-foreground);display:flex;font-size:.6em;height:80px;justify-content:flex-end;padding:30px;text-align:right;text-shadow:0 0 5px var(--color-background);width:80px}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:.6em;}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs{background:#fff;color:#000}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-addition,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-meta,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-string,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-symbol,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-template-tag,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-template-variable{color:#756bb1}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-comment,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-quote{color:#636363}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-bullet,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-link,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-literal,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-number,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-regexp{color:#31a354}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-deletion,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-variable{color:#88f}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-built_in,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-doctag,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-keyword,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-name,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-section,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-selector-class,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-selector-id,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-selector-tag,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-strong,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-tag,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-title,div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-type{color:#3182bd}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section:where(:not(.invert)) .hljs-attribute{color:#e6550d}div#\:\$p > svg > foreignObject > section:where(.invert){--color-background:#202228;--color-background-code:#2b2d33;--color-background-paginate:hsla(0,0%,100%,.05);--color-foreground:#fff;--color-highlight:#60d0f0;--color-highlight-hover:#88dcf4;--color-highlight-heading:#80d9f3;--color-header:hsla(0,0%,100%,.4);--color-header-shadow:rgba(32,34,40,.8);}div#\:\$p > svg > foreignObject > section:where(.invert) :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section:where(.invert) code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs{background:#222;color:#fff}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-comment,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-quote{color:#777}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-built_in,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-bullet,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-deletion,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-link,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-literal,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-meta,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-number,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-params,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-regexp,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-symbol,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-tag,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-template-variable,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-variable{color:#ab875d}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-attribute,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-name,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-section,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-selector-class,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-selector-id,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-title,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-type{color:#9b869b}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-addition,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-keyword,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-selector-tag,div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-string{color:#8f9c6c}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section:where(.invert) .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section[data-header]>:nth-child(2){margin-top:0}div#\:\$p > svg > foreignObject > section>:last-child,div#\:\$p > svg > foreignObject > section[data-footer]>:nth-last-child(2){margin-bottom:0}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:0 0 15px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:15px 0 30px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight-heading);font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:660px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.7em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.4em;letter-spacing:2px}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.2em;letter-spacing:2px}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em;letter-spacing:1px}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.8em;letter-spacing:1px}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{color:var(--color-header);font-size:.45em;left:70px;letter-spacing:1px;position:absolute;right:70px;text-shadow:0 1px 0 var(--color-header-shadow);z-index:1}div#\:\$p > svg > foreignObject > section header{top:30px}div#\:\$p > svg > foreignObject > section footer{bottom:30px}div#\:\$p > svg > foreignObject > section a{color:var(--color-highlight);text-decoration:none}div#\:\$p > svg > foreignObject > section a:hover{color:var(--color-highlight-hover);text-decoration:underline}div#\:\$p > svg > foreignObject > section ol,div#\:\$p > svg > foreignObject > section ul{margin:0 auto;text-align:left}div#\:\$p > svg > foreignObject > section>ol,div#\:\$p > svg > foreignObject > section>ul{margin-bottom:15px}div#\:\$p > svg > foreignObject > section code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;letter-spacing:0}div#\:\$p > svg > foreignObject > section :not(:is(pre, marp-pre))>code,div#\:\$p > svg > foreignObject > section>code{background:var(--color-background-code);color:var(--color-foreground);margin:-.2em .2em .2em;padding:.2em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){--preserve-aspect-ratio:xMidYMid meet;filter:drop-shadow(0 4px 4px rgba(0, 0, 0, .2));font-size:70%;line-height:1.15;margin:15px 0 30px;text-align:left}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:570px}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:var(--color-background-code);box-sizing:content-box;color:var(--color-foreground);display:block;margin:0 auto;min-width:456px;padding:.4em .6em}div#\:\$p > svg > foreignObject > section[data-size="4:3"] :is(pre, marp-pre)>code{min-width:328px}div#\:\$p > svg > foreignObject > section table{border-collapse:collapse;margin:0 auto 15px}div#\:\$p > svg > foreignObject > section table>tbody>tr>td,div#\:\$p > svg > foreignObject > section table>tbody>tr>th,div#\:\$p > svg > foreignObject > section table>thead>tr>td,div#\:\$p > svg > foreignObject > section table>thead>tr>th{padding:.15em .5em}div#\:\$p > svg > foreignObject > section table>thead>tr>td,div#\:\$p > svg > foreignObject > section table>thead>tr>th{border-bottom:3px solid}div#\:\$p > svg > foreignObject > section table>tbody>tr:not(:last-child)>td,div#\:\$p > svg > foreignObject > section table>tbody>tr:not(:last-child)>th{border-bottom:1px solid}div#\:\$p > svg > foreignObject > section blockquote{font-size:90%;line-height:1.3;padding:0 2em;position:relative;z-index:0}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNDQgMTkuMyAzOC45NCAwQzguMTQgOS41OSAwIDQwLjA1IDAgNTQuODNWMTAwaDQxLjQ3VjU0LjgzaC0yM2MtLjA0LS4yOC4yNS0yNy42NiAyNS41My0zNS41M201NiAwTDk0Ljk0IDBDNjQuMTQgOS41OSA1NiA0MC4wNSA1NiA1NC44M1YxMDBoNDEuNDdWNTQuODNoLTIzYy0uMDQtLjI4LjI1LTI3LjY2IDI1LjUzLTM1LjUzIiBzdHlsZT0iZmlsbDojODg4O29wYWNpdHk6LjMzIi8+PC9zdmc+");height:auto;pointer-events:none;position:absolute;width:1em;z-index:-1}div#\:\$p > svg > foreignObject > section blockquote:before{left:0;top:0}div#\:\$p > svg > foreignObject > section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:last-child{margin-bottom:0}div#\:\$p > svg > foreignObject > section mark{background:transparent;color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section{font-family:'Iosevka'}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1), div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#6CC417}div#\:\$p > svg > foreignObject > section .columns{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p > svg > foreignObject > section[data-marpit-scope-j9C74BGn] table{font-size:20px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-Jfj6FhO8] table{font-size:20px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="skip" data-footer="Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustated by Ditte Jensen" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -19,7 +19,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" style="--class:invert;--paginate:skip;--footer:Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustrated by Ditte Jensen;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" style="--class:invert;--paginate:skip;--footer:Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustated by Ditte Jensen;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -30,12 +30,34 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;">
-<h1 is="marp-h1" data-auto-scaling id="graph-data-modelling-for-agentic-ai"> Graph data modelling for Agentic AI</h1>
+;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/computer.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="1" data-class="invert" data-paginate="skip" data-footer="Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustated by Ditte Jensen" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" style="--class:invert;--paginate:skip;--footer:Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustated by Ditte Jensen;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
+<h2 id="graph-data-modelling-for-agentic-ai">Graph data modelling for Agentic AI</h2>
 <p>Cloud Native Denmark 2025</p>
-<footer>Nina Jensen (she/her) • Senior Software Engineer @ <a href="https://cernel.ai">Cernel AI</a> • Illustrated by Ditte Jensen</footer>
+<footer>Nina Jensen (she/her) • Senior Software Engineer @ <a href="https://cernel.ai">Cernel AI</a> • Illustated by Ditte Jensen</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="skip" data-footer="Nina Jensen (she/her) • Senior Software Engineer @ [Cernel AI](https://cernel.ai) • Illustated by Ditte Jensen" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -46,7 +68,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="1" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" style="" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -57,15 +79,47 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30">
+" lang="en-GB" class="invert" data-marpit-pagination="1" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/ai_agent.png&quot;);"></figure></div></section></foreignObject><foreignObject width="70%" height="720" x="30%"><section id="2" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="1" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="30" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
 <h2 id="what-is-agentic-ai">What is Agentic AI?</h2>
 <blockquote>
 <p>Agentic AI is a class of artificial intelligence that focuses on <strong>autonomous systems</strong> that can make decisions and perform tasks with or without human intervention.<br />
 <a href="https://en.wikipedia.org/wiki/Agentic_AI">Wikipedia</a></p>
 </blockquote>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -76,7 +130,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="2" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="1" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -87,15 +141,47 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30">
+" lang="en-GB" class="invert" data-marpit-pagination="2" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/ai_agent.png&quot;);"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="3" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="2" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="30" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="what-is-agentic-ai-1">What is Agentic AI?</h2>
 <blockquote>
 <p>Agentic AI is an artificial intelligence system that can accomplish a specific goal with <strong>limited supervision</strong>. It consists of AI agents—machine learning models that mimic human decision-making to solve problems in real time.<br />
 <a href="https://www.ibm.com/think/topics/agentic-ai">IBM</a></p>
 </blockquote>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-fragments="2" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -106,7 +192,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="3" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="2" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-fragments="2" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -117,18 +203,50 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30">
+" lang="en-GB" class="invert" data-marpit-pagination="3" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/ufo_empty.png&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720" x="40%"><section id="4" data-marpit-fragments="2" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="3" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="30" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
 <h2 id="veracity--reliability">Veracity &amp; reliability</h2>
 <ul>
 <li data-marpit-fragment="1">LLM agents are stochastic processes</li>
 <li data-marpit-fragment="2">Research from <a href="https://arxiv.org/pdf/2509.04664">OpenAI</a> shows they will always be prone to &quot;hallucinations&quot;</li>
 </ul>
-<div>
+<div data-marpit-fragment>
 <h5 id="how-can-we-make-them-more-reliable">How can we make them more reliable?</h5>
 </div>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="2" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -139,7 +257,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="4" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="3" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -150,7 +268,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/prompt.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="5" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="4" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -161,7 +279,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="4" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/prompt.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="5" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -172,9 +290,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="content"><footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
-</section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="4" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -185,7 +301,8 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="4" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-marpit-fragments="3" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -196,7 +313,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="5" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="4" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -207,7 +324,40 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30">
+" lang="en-GB" class="invert" data-marpit-pagination="5" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/ufo_cow.png&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="6" data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="5" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="30" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="context-rot">Context rot</h2>
 <ul>
 <li data-marpit-fragment="1">LLMs do not use their context uniformly</li>
@@ -215,10 +365,11 @@ h1, h2 {
 <li data-marpit-fragment="3">Smaller inputs lead to better results</li>
 </ul>
 <p><br /><br /></p>
-<h6 id="httpsresearchtrychromacomcontext-rot"><a href="https://research.trychroma.com/context-rot">https://research.trychroma.com/context-rot</a></h6>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
+<div data-marpit-fragment>
+<h6 is="marp-h6" data-auto-scaling id="httpsresearchtrychromacomcontext-rot"> <a href="https://research.trychroma.com/context-rot">https://research.trychroma.com/context-rot</a></h6>
+</div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -229,7 +380,18 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="6" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="5" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="6" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -242,10 +404,8 @@ h1, h2 {
 }
 ;" data-marpit-pagination-total="30">
 <h2 id="context-engineering">Context engineering</h2>
-<p>SIKE</p>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="invert" data-paginate="hold" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -256,7 +416,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="7" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="6" style="--class:invert;--paginate:hold;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -267,31 +427,11 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/data_engineering.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="8" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
-  font-family: 'Iosevka';
-}
-h1, h2 {
-  color: #6CC417;
-}
-.columns {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-" lang="en-GB" class="invert" data-marpit-pagination="7" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
-  font-family: 'Iosevka';
-}
-h1, h2 {
-  color: #6CC417;
-}
-.columns {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="content"><footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
+;" data-marpit-pagination-total="30">
+<h2 id="context-engineering-1"><s>Context engineering</s></h2>
+<h3 id="sike">SIKE</h3>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -302,7 +442,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="7" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="3" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="7" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -313,7 +453,52 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="8" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/data_engineering.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="9" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="7" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="7" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="8" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -326,7 +511,7 @@ h1, h2 {
 }
 ;" data-marpit-pagination-total="30">
 <h2 id="data-engineering">Data engineering</h2>
-<div>
+<div data-marpit-fragment>
 <h3 id="relational-databases">Relational databases</h3>
 </div>
 <ul>
@@ -334,9 +519,8 @@ h1, h2 {
 <li data-marpit-fragment="2">We denormalize data to make it easier to query analytically</li>
 <li data-marpit-fragment="3">Ask your local data analyst how easy it is to find the data you need</li>
 </ul>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -347,7 +531,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="9" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="9" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -358,7 +542,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/cat_ufo.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="10" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/cat_ufo.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="11" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -369,7 +553,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="9" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="9" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -383,9 +567,8 @@ h1, h2 {
 ;" data-marpit-pagination-total="30" data-marpit-advanced-background="content">
 <h2 id="relational-data">Relational data</h2>
 <p>UFO sightings in the US</p>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -396,7 +579,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="9" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-scope-a3hmuFbk="" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="9" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-scope-j9C74BGn="" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -407,7 +590,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="10" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="10" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -422,7 +605,7 @@ h1, h2 {
 <h2 id="relational-data-1">Relational data</h2>
 <br />
 <div class="columns">
-<div>
+<div data-marpit-fragment>
 <table>
 <thead>
 <tr>
@@ -451,7 +634,7 @@ h1, h2 {
 </tbody>
 </table>
 </div>
-<div>
+<div data-marpit-fragment>
 <table>
 <thead>
 <tr>
@@ -477,7 +660,7 @@ h1, h2 {
 </tbody>
 </table>
 </div>
-<div>
+<div data-marpit-fragment>
 <table>
 <thead>
 <tr>
@@ -494,9 +677,8 @@ h1, h2 {
 </tbody>
 </table>
 </div>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="4" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -507,7 +689,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="11" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="11" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -518,7 +700,29 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30">
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/ufo_party.png&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="13" data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="11" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="30" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="graph-databases">Graph databases</h2>
 <ul>
 <li data-marpit-fragment="1">Part of the NoSQL family</li>
@@ -526,9 +730,8 @@ h1, h2 {
 <li data-marpit-fragment="3">Flexible schemas &amp; index-free adjacency</li>
 <li data-marpit-fragment="4">Implementations include <a href="https://github.com/neo4j/neo4j">Neo4j</a>, <a href="https://github.com/hypermodeinc/dgraph">dgraph</a>, <a href="https://github.com/apache/age">Apache AGE</a></li>
 </ul>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="4" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -539,7 +742,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="12" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="11" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -550,7 +753,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/graph_2.png&quot;);background-size:85%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="13" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="12" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -561,7 +764,18 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="12" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/graph_2.png&quot;);background-size:85%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="14" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="12" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -578,9 +792,8 @@ h1, h2 {
 <br /><br /><br />
 <br /><br /><br />
 <br /><br /></p>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -591,7 +804,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="12" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-scope-IcZridmS="" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="12" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-scope-Jfj6FhO8="" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -602,7 +815,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="13" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="13" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -615,7 +828,7 @@ h1, h2 {
 }
 ;" data-marpit-pagination-total="30">
 <h2 id="relational-data-2">Relational data</h2>
-<div>
+<div data-marpit-fragment>
 <table>
 <thead>
 <tr>
@@ -647,7 +860,7 @@ h1, h2 {
 </tbody>
 </table>
 </div>
-<div>
+<div data-marpit-fragment>
 <table>
 <thead>
 <tr>
@@ -676,7 +889,7 @@ h1, h2 {
 </tbody>
 </table>
 </div>
-<div>
+<div data-marpit-fragment>
 <table>
 <thead>
 <tr>
@@ -696,9 +909,8 @@ h1, h2 {
 </tbody>
 </table>
 </div>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -709,7 +921,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="14" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="14" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -720,7 +932,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/graph_2.png&quot;);background-size:85%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="15" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/graph_2.png&quot;);background-size:85%;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="16" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -731,7 +943,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="14" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="14" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -748,9 +960,8 @@ h1, h2 {
 <br /><br /><br />
 <br /><br /><br />
 <br /><br /></p>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -761,7 +972,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="14" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="1" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="14" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="1" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -772,7 +983,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="15" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="15" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -789,12 +1000,11 @@ h1, h2 {
 <li data-marpit-fragment="1">We'll be using <a href="https://www.kaggle.com/datasets/NUFORC/ufo-sightings">this dataset from Kaggle</a></li>
 </ul>
 <br />
-<div>
+<div data-marpit-fragment>
 <p><img src="./assets/kaggle.png" alt="" style="width:700px;" /></p>
 </div>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="1" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="1" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -805,7 +1015,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="16" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="16" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -822,12 +1032,11 @@ h1, h2 {
 <li data-marpit-fragment="1">We have also hacked NASA's database...</li>
 </ul>
 <br />
-<div>
+<div data-marpit-fragment>
 <p><img src="./assets/nasa.png" alt="" style="width:1150px;" /></p>
 </div>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -838,7 +1047,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="17" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="17" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -849,7 +1058,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGthdnZ2bGVsMnlocGRxb2Rqd2s1dDVhODB6aXZoZGRzbWh2MmZ6cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ehwuBgKNA2NACoFa7w/giphy.gif&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="18" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGthdnZ2bGVsMnlocGRxb2Rqd2s1dDVhODB6aXZoZGRzbWh2MmZ6cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ehwuBgKNA2NACoFa7w/giphy.gif&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="19" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -860,7 +1069,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="17" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="17" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -873,9 +1082,8 @@ h1, h2 {
 }
 ;" data-marpit-pagination-total="30" data-marpit-advanced-background="content">
 <h2 id="based--rust-pilled">BASED &amp; RUST PILLED</h2>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -886,7 +1094,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="17" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="5" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="17" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="5" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -897,7 +1105,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="18" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="18" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -917,9 +1125,8 @@ h1, h2 {
 <li data-marpit-fragment="4"><a href="https://www.polars.org/https://pola.rs/">polars</a> - Data processing</li>
 <li data-marpit-fragment="5"><a href="https://github.com/neo4j/neo4j-python-driver-rust-ext">neo4j-rust-ext</a> - Neo4j Python driver</li>
 </ul>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1002,7 +1209,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/rogue_ai.webp&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="21" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/rogue_ai.webp&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="22" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1038,7 +1245,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="20" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="20" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1091,7 +1298,7 @@ h1, h2 {
 
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1141,7 +1348,7 @@ h1, h2 {
     )
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1220,7 +1427,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;--marpit-advanced-background-split:70%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/full_graph.png&quot;);"></figure></div></section></foreignObject><foreignObject width="30%" height="720" x="70%"><section id="25" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+;--marpit-advanced-background-split:70%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/full_graph.png&quot;);"></figure></div></section></foreignObject><foreignObject width="30%" height="720" x="70%"><section id="26" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1256,7 +1463,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="24" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="24" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1300,7 +1507,7 @@ h1, h2 {
 
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1351,7 +1558,7 @@ sightings_agent = partial(get_agent, output_type=<span class="hljs-built_in">lis
 
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1400,7 +1607,7 @@ h1, h2 {
 
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1411,7 +1618,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="28" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="28" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1422,11 +1629,32 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30">
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="30" data-marpit-advanced-background="background" data-marpit-advanced-background-split="left"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/ai_agent.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720" x="50%"><section id="30" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="28" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="30" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left">
 <h2 id="lets-see-it-in-action">Let's see it in action...</h2>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-fragments="3" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1437,7 +1665,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="29" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="28" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="left"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1448,7 +1676,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://tenor.com/view/yeah-the-x-files-agent-scully-dana-scully-scully-gif-27518038.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="30" data-marpit-fragments="3" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="29" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1459,7 +1687,18 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="29" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://tenor.com/view/yeah-the-x-files-agent-scully-dana-scully-scully-gif-27518038.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="31" data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
+  font-family: 'Iosevka';
+}
+h1, h2 {
+  color: #6CC417;
+}
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+" lang="en-GB" class="invert" data-marpit-pagination="29" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1477,9 +1716,8 @@ h1, h2 {
 <li data-marpit-fragment="2">Proper data engineering is still important</li>
 <li data-marpit-fragment="3">Graph data modelling can help provide concise context</li>
 </ul>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="3" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="3" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1490,7 +1728,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="29" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+" lang="en-GB" class="invert" data-marpit-pagination="29" style="" data-marpit-pagination-total="30" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1501,7 +1739,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="30" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="30" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1512,7 +1750,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/truth.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="31" data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+;" data-marpit-pagination-total="30" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./assets/truth.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="32" data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1523,7 +1761,7 @@ h1, h2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
-" lang="en-GB" class="invert" data-marpit-pagination="30" style="--class:invert;--paginate:true;--footer:Graph data modelling for Agentic AI • Cloud Native Denmark 2025;--theme:uncover;--style:section {
+" lang="en-GB" class="invert" data-marpit-pagination="30" style="--class:invert;--paginate:true;--theme:uncover;--style:section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1535,18 +1773,17 @@ h1, h2 {
   gap: 1rem;
 }
 ;" data-marpit-pagination-total="30" data-marpit-advanced-background="content">
-<div>
+<div data-marpit-fragment>
 <p>Thanks <img class="emoji" draggable="false" alt="👽" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f47d.svg" data-marp-twemoji=""/></p>
 </div>
 <br />
 <br />
-<div>
+<div data-marpit-fragment>
 <p><img src="./assets/linkedin.jpg" alt="" style="height:300px;" /></p>
 </div>
-<footer>Graph data modelling for Agentic AI • Cloud Native Denmark 2025</footer>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),h=Symbol();const g=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[h]||(Object.defineProperty(window,h,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await g()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const w=Symbol(),b=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();(o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o))&&a!==HTMLElement?i||customElements.define(s,r(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[w])return e[w];const i=v({target:e}),n=()=>{i(),delete e[w]},l=Object.assign(n,{cleanup:n,update:()=>b(e)});return Object.defineProperty(e,w,{configurable:!0,value:l}),l},y=document.currentScript;b(y?y.getRootNode():document)}();
-</script></foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-footer="Graph data modelling for Agentic AI • Cloud Native Denmark 2025" data-theme="uncover" data-style="section {
+</script></foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-class="invert" data-paginate="true" data-theme="uncover" data-style="section {
   font-family: 'Iosevka';
 }
 h1, h2 {
@@ -1572,20 +1809,20 @@ Describes frameworks rather than a specific technology</p></div><div class="besp
 There's another problem too</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>Key takeaways from article:
 - LLMs should in principle handle the 10,000th token as reliably as the 1st
 - But they don't :)
-- Model performance varies significantly even on simple tasks as input length changes</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>Why are we inventing new engineering disciplines when we already have a perfectly good one?</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>Traditionally in data engineering, we work with relational databases, denormalize data and move it into datalakes
+- Model performance varies significantly even on simple tasks as input length changes</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>Why are we inventing new engineering disciplines when we already have a perfectly good one?</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>Traditionally in data engineering, we work with relational databases, denormalize data and move it into datalakes
 The point here:
 There's an entire career field dedicated to analysing data and finding correct context
-It's not easy!</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>As an example, we could use ecommerce data... but frankly that's a bit boring
+It's not easy!</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>As an example, we could use ecommerce data... but frankly that's a bit boring
 
-So we'll use UFO sightings instead!</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>This is an example of how our UFO sightings data could be stored in a relational database
-It's somewhat normalized which is nice for several good reasons when working transactional systems</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>Index-free adjacency means that each node references its neighbours
+So we'll use UFO sightings instead!</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>This is an example of how our UFO sightings data could be stored in a relational database
+It's somewhat normalized which is nice for several good reasons when working transactional systems</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>Index-free adjacency means that each node references its neighbours
 Accessing relationships and related data is a memory pointer lookup
 This means that data retrieval is constant in the amount of data _accessed_ not the amount of data _stored_
-Relationships are first-class entities</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>Example of how UFO data could be stored in a graph database
+Relationships are first-class entities</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>Example of how UFO data could be stored in a graph database
 Note that we have split data into more entities than the three tables shown earlier
 This is because we can get deduplication for free!
 For example, observation dates can be shared between multiple sightings
-which allows us to do effective queries like &quot;give me all sightings in the last month&quot;</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>Example of how UFO data could be stored in a graph database
+which allows us to do effective queries like &quot;give me all sightings in the last month&quot;</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>Example of how UFO data could be stored in a graph database
 Note that we have split data into more entities than the three tables shown earlier
 This is because we can get deduplication for free!
 For example, observation dates can be shared between multiple sightings
